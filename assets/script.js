@@ -3,7 +3,7 @@ class YogaBook9iBlackout {
 		this.fullMode = true;
 
 		// Disable Window Management API features if not available
-		if (!this.requestPermission()) {
+		if (!("getScreenDetails") in window) {
 			this.polyfill();
 		}
 
